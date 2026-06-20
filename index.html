@@ -1,136 +1,713 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PedLab - Экстренная педагогическая помощь</title>
-    <link rel="stylesheet" href="style.css" >
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div>
-                    <h1 class="logo">PedLab</h1>
-                    <p class="subtitle">Экстренная педагогическая помощь</p>
-                </div>
-                <nav class="nav">
-                    <a href="#" class="nav-link">Главная</a>
-                    <a href="#" class="nav-link">Репетиторы</a>
-                    <a href="#" class="nav-link">О нас</a>
-                    <a href="#" class="nav-link">Контакты</a>
-                </nav>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>PedLab — подбор репетиторов с записью на занятия</title>
+    <meta
+      name="description"
+      content="PedLab — современная платформа подбора репетиторов для ОГЭ и ЕГЭ. Запись на занятия, проверенные преподаватели, личный кабинет."
+    />
+    <meta property="og:title" content="PedLab — подбор репетиторов" />
+    <meta
+      property="og:description"
+      content="Найдите идеального репетитора, запишитесь на занятие и готовьтесь к экзаменам с PedLab."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="theme-color" content="#1b1b1b" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <a href="#main" class="page__skip-link">Перейти к контенту</a>
+
+    <header class="header header--fixed" id="header">
+      <div class="header__inner container">
+        <a href="#main" class="header__logo" aria-label="PedLab — на главную">
+          Ped<span class="header__logo-accent">Lab</span>
+        </a>
+
+        <button
+          class="header__burger"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+
+        <nav class="header__nav" id="nav-menu" aria-label="Основная навигация">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a class="header__link" href="#about">О нас</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__link" href="#tests">Тесты</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__link" href="#why-school">Почему не Школа</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__link" href="#reviews">Отзывы</a>
+            </li>
+          </ul>
+          <a class="header__cabinet button button--ghost" href="#cabinet">
+            Личный кабинет
+          </a>
+        </nav>
+      </div>
+      <div class="header__overlay" aria-hidden="true"></div>
     </header>
-    
-    <section class="hero">
-        <div class="container">
-            <h2 class="hero-title">Найдите идеального репетитора для ОГЭ</h2>
-            <p class="hero-subtitle">Молодые, понимающие преподаватели с проверенными методиками подготовки к экзаменам</p>
-            <a href="#" class="cta-button">Найти репетитора</a>
-        </div>
-    </section>
-    
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Наши репетиторы</h2>
-            <div class="tutors-grid">
-                <div class="tutor-card">
-                    <div class="tutor-image" style="background-image: url(/images/Максим.jpg);"></div>
-                    <div class="tutor-info">
-                        <h3 class="tutor-name">Алексашин Максим</h3>
-                        <span class="tutor-subject">История</span>
-                        <p class="tutor-description">Воевал, Вовевал, позывной "Рваный гудок"</p>
-                        <div class="tutor-stats">
-                            <div class="stat">
-                                <div class="stat-value">4 года</div>
-                                <div class="stat-label">Опыт</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">14.88</div>
-                                <div class="stat-label">Рейтинг</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tutor-card">
-                    <div class="tutor-image" style="background-image: url(/images/Андрей.jpg);"></div>
-                    <div class="tutor-info">
-                        <h3 class="tutor-name">Андрей Ефремов</h3>
-                        <span class="tutor-subject">Исторя/Обществознание</span>
-                        <p class="tutor-description">Тоже воевал, позываной "Шершавый буравчик"</p>
-                        <div class="tutor-stats">
-                            <div class="stat">
-                                <div class="stat-value">4 года</div>
-                                <div class="stat-label">Опыт</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">19.45</div>
-                                <div class="stat-label">Рейтинг</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tutor-card">
-                    <div class="tutor-image" style="background-image: url(/images/Лина.jpg);"></div>
-                    <div class="tutor-info">
-                        <h3 class="tutor-name">Васелина Твеленева</h3>
-                        <span class="tutor-subject">Исторя/Обществознание</span>
-                        <p class="tutor-description">Хуй</p>
-                        <div class="tutor-stats">
-                            <div class="stat">
-                                <div class="stat-value">4 года</div>
-                                <div class="stat-label">Опыт</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-value">5.0</div>
-                                <div class="stat-label">Рейтинг</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+    <main class="page__main" id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__shape hero__shape--left" aria-hidden="true"></div>
+        <div class="hero__shape hero__shape--right" aria-hidden="true"></div>
+        <div class="hero__inner container">
+          <div class="hero__content animate-on-scroll">
+            <p class="hero__label">Платформа подбора репетиторов</p>
+            <h1 class="hero__title" id="hero-title">
+              <span class="hero__title-line">Найди своего</span>
+              <span class="hero__title-line">репетитора</span>
+            </h1>
+            <p class="hero__text">
+              PedLab объединяет проверенных преподавателей, удобную запись на
+              занятия и подготовку к ОГЭ и ЕГЭ — всё в одном месте.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#teachers">
+                Выбрать репетитора
+                <svg class="button__icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a class="button button--outline" href="#booking">Записаться</a>
             </div>
-        </div>
-    </section>
-    
-    <section class="section features">
-        <div class="container">
-            <h2 class="section-title features-title">Почему выбирают нас</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">👨‍🏫</div>
-                    <h3 class="feature-title">Молодые преподаватели</h3>
-                    <p class="feature-description">Наши репетиторы близки по возрасту к ученикам, что помогает установить доверительные отношения и лучше понять проблемы в обучении.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3 class="feature-title">Проверенные методики</h3>
-                    <p class="feature-description">Каждый преподаватель использует собственный рабочий подход к обучению, который доказал свою эффективность на практике.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3 class="feature-title">Высокие результаты</h3>
-                    <p class="feature-description">Наши ученики в среднем сдают ОГЭ на 20% лучше, чем их сверстники, благодаря индивидуальному подходу и современным методикам.</p>
-                </div>
+          </div>
+          <div class="hero__visual animate-on-scroll" aria-hidden="true">
+            <div class="hero__frame">
+              <img
+                class="hero__image"
+                src="images/Максим.jpg"
+                alt=""
+                width="480"
+                height="560"
+                fetchpriority="high"
+              />
             </div>
+          </div>
         </div>
-    </section>
-    
+      </section>
+
+      <section class="teachers section" id="teachers" aria-labelledby="teachers-title">
+        <div class="container">
+          <header class="section__header animate-on-scroll">
+            <p class="section__label">Наши преподаватели</p>
+            <h2 class="section__title" id="teachers-title">Репетиторы PedLab</h2>
+            <p class="section__desc">
+              Каждый педагог прошёл отбор и работает по проверенным методикам
+              подготовки к экзаменам.
+            </p>
+          </header>
+
+          <ul class="teachers__list">
+            <li class="teachers__item animate-on-scroll">
+              <article class="teacher-card teacher-card--reverse">
+                <div class="teacher-card__media">
+                  <img
+                    class="teacher-card__photo"
+                    src="images/Максим.jpg"
+                    alt="Максим Алексашин — репетитор по истории"
+                    width="320"
+                    height="400"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="teacher-card__body">
+                  <h3 class="teacher-card__name">Максим Алексашин</h3>
+                  <p class="teacher-card__subject">История · ЕГЭ / ОГЭ</p>
+                  <p class="teacher-card__desc">
+                    История оживает на занятиях. Индивидуальный план подготовки
+                    к экзаменам и разбор типовых заданий.
+                  </p>
+                  <dl class="teacher-card__stats">
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Опыт</dt>
+                      <dd class="teacher-card__stat-value">4 года</dd>
+                    </div>
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Рейтинг</dt>
+                      <dd class="teacher-card__stat-value">4.9</dd>
+                    </div>
+                  </dl>
+                  <div class="teacher-card__actions">
+                    <a class="button button--primary button--sm" href="#booking" data-tutor="Максим Алексашин">
+                      Записаться
+                    </a>
+                    <a
+                      class="button button--outline button--sm"
+                      href="https://techbyteso.github.io/MaxTeachCard/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Портфолио
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li class="teachers__item animate-on-scroll">
+              <article class="teacher-card">
+                <div class="teacher-card__media">
+                  <img
+                    class="teacher-card__photo"
+                    src="images/Андрей.jpg"
+                    alt="Андрей Ефремов — репетитор по истории и обществознанию"
+                    width="320"
+                    height="400"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="teacher-card__body">
+                  <h3 class="teacher-card__name">Андрей Ефремов</h3>
+                  <p class="teacher-card__subject">История · Обществознание</p>
+                  <p class="teacher-card__desc">
+                    Системная подготовка к ОГЭ и ЕГЭ. Помогает разобраться в
+                    сложных темах и уверенно писать сочинения.
+                  </p>
+                  <dl class="teacher-card__stats">
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Опыт</dt>
+                      <dd class="teacher-card__stat-value">4 года</dd>
+                    </div>
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Рейтинг</dt>
+                      <dd class="teacher-card__stat-value">4.8</dd>
+                    </div>
+                  </dl>
+                  <div class="teacher-card__actions">
+                    <a class="button button--primary button--sm" href="#booking" data-tutor="Андрей Ефремов">
+                      Записаться
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li class="teachers__item animate-on-scroll">
+              <article class="teacher-card teacher-card--reverse">
+                <div class="teacher-card__media">
+                  <img
+                    class="teacher-card__photo"
+                    src="images/Лина.jpg"
+                    alt="Василина Твеленева — репетитор по истории и обществознанию"
+                    width="320"
+                    height="400"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="teacher-card__body">
+                  <h3 class="teacher-card__name">Василина Твеленева</h3>
+                  <p class="teacher-card__subject">История · Обществознание</p>
+                  <p class="teacher-card__desc">
+                    Дружелюбный подход и структурированные занятия. Помогает
+                    ученикам не бояться экзамена и получать стабильные баллы.
+                  </p>
+                  <dl class="teacher-card__stats">
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Опыт</dt>
+                      <dd class="teacher-card__stat-value">3 года</dd>
+                    </div>
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Рейтинг</dt>
+                      <dd class="teacher-card__stat-value">5.0</dd>
+                    </div>
+                  </dl>
+                  <div class="teacher-card__actions">
+                    <a class="button button--primary button--sm" href="#booking" data-tutor="Василина Твеленева">
+                      Записаться
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li class="teachers__item animate-on-scroll">
+              <article class="teacher-card">
+                <div class="teacher-card__media">
+                  <div class="teacher-card__placeholder" aria-hidden="true">АС</div>
+                </div>
+                <div class="teacher-card__body">
+                  <h3 class="teacher-card__name">Анна Смирнова</h3>
+                  <p class="teacher-card__subject">Русский язык · ЕГЭ</p>
+                  <p class="teacher-card__desc">
+                    Подготовка к сочинению и тестовой части. Разбор ошибок и
+                    тренировка на реальных форматах заданий.
+                  </p>
+                  <dl class="teacher-card__stats">
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Опыт</dt>
+                      <dd class="teacher-card__stat-value">5 лет</dd>
+                    </div>
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Рейтинг</dt>
+                      <dd class="teacher-card__stat-value">4.9</dd>
+                    </div>
+                  </dl>
+                  <div class="teacher-card__actions">
+                    <a class="button button--primary button--sm" href="#booking" data-tutor="Анна Смирнова">
+                      Записаться
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li class="teachers__item animate-on-scroll">
+              <article class="teacher-card teacher-card--reverse">
+                <div class="teacher-card__media">
+                  <div class="teacher-card__placeholder" aria-hidden="true">ДК</div>
+                </div>
+                <div class="teacher-card__body">
+                  <h3 class="teacher-card__name">Дмитрий Ковалёв</h3>
+                  <p class="teacher-card__subject">Физика · ЕГЭ / ОГЭ</p>
+                  <p class="teacher-card__desc">
+                    Объясняет физику с нуля до уверенного уровня. Практика
+                    задач и подготовка к поступлению в технические вузы.
+                  </p>
+                  <dl class="teacher-card__stats">
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Опыт</dt>
+                      <dd class="teacher-card__stat-value">6 лет</dd>
+                    </div>
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Рейтинг</dt>
+                      <dd class="teacher-card__stat-value">4.8</dd>
+                    </div>
+                  </dl>
+                  <div class="teacher-card__actions">
+                    <a class="button button--primary button--sm" href="#booking" data-tutor="Дмитрий Ковалёв">
+                      Записаться
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li class="teachers__item animate-on-scroll">
+              <article class="teacher-card">
+                <div class="teacher-card__media">
+                  <div class="teacher-card__placeholder" aria-hidden="true">ЕМ</div>
+                </div>
+                <div class="teacher-card__body">
+                  <h3 class="teacher-card__name">Елена Морозова</h3>
+                  <p class="teacher-card__subject">Английский язык</p>
+                  <p class="teacher-card__desc">
+                    Разговорная практика и подготовка к экзаменам. Комфортная
+                    атмосфера и заметный прогресс уже через несколько месяцев.
+                  </p>
+                  <dl class="teacher-card__stats">
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Опыт</dt>
+                      <dd class="teacher-card__stat-value">7 лет</dd>
+                    </div>
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Рейтинг</dt>
+                      <dd class="teacher-card__stat-value">5.0</dd>
+                    </div>
+                  </dl>
+                  <div class="teacher-card__actions">
+                    <a class="button button--primary button--sm" href="#booking" data-tutor="Елена Морозова">
+                      Записаться
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <li class="teachers__item animate-on-scroll">
+              <article class="teacher-card teacher-card--reverse">
+                <div class="teacher-card__media">
+                  <div class="teacher-card__placeholder" aria-hidden="true">ОП</div>
+                </div>
+                <div class="teacher-card__body">
+                  <h3 class="teacher-card__name">Ольга Павлова</h3>
+                  <p class="teacher-card__subject">Химия · ОГЭ</p>
+                  <p class="teacher-card__desc">
+                    Сложные темы становятся понятными. Пошаговый разбор формул,
+                    реакций и типовых заданий ОГЭ.
+                  </p>
+                  <dl class="teacher-card__stats">
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Опыт</dt>
+                      <dd class="teacher-card__stat-value">4 года</dd>
+                    </div>
+                    <div class="teacher-card__stat">
+                      <dt class="teacher-card__stat-label">Рейтинг</dt>
+                      <dd class="teacher-card__stat-value">4.9</dd>
+                    </div>
+                  </dl>
+                  <div class="teacher-card__actions">
+                    <a class="button button--primary button--sm" href="#booking" data-tutor="Ольга Павлова">
+                      Записаться
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about section section--dark" id="about" aria-labelledby="about-title">
+        <div class="about__shape" aria-hidden="true"></div>
+        <div class="container">
+          <div class="about__grid">
+            <header class="section__header animate-on-scroll">
+              <p class="section__label">О нас</p>
+              <h2 class="section__title" id="about-title">PedLab — сервис, а не просто сайт</h2>
+              <p class="section__desc">
+                Мы создаём платформу, где ученик быстро находит репетитора,
+                записывается на занятие и отслеживает прогресс в личном кабинете.
+              </p>
+            </header>
+            <ul class="about__features animate-on-scroll">
+              <li class="about__feature">
+                <span class="about__feature-num">01</span>
+                <h3 class="about__feature-title">Подбор репетитора</h3>
+                <p class="about__feature-text">
+                  Карточки преподавателей с предметами, опытом и отзывами учеников.
+                </p>
+              </li>
+              <li class="about__feature">
+                <span class="about__feature-num">02</span>
+                <h3 class="about__feature-title">Запись на занятия</h3>
+                <p class="about__feature-text">
+                  Выбор даты и времени в пару кликов — без звонков и переписки.
+                </p>
+              </li>
+              <li class="about__feature">
+                <span class="about__feature-num">03</span>
+                <h3 class="about__feature-title">Личный кабинет</h3>
+                <p class="about__feature-text">
+                  Расписание, история занятий и материалы — всё в одном месте.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="tests section" id="tests" aria-labelledby="tests-title">
+        <div class="container">
+          <header class="section__header animate-on-scroll">
+            <p class="section__label">Тесты</p>
+            <h2 class="section__title" id="tests-title">ОГЭ и ЕГЭ</h2>
+            <p class="section__desc">
+              Пробные тесты и тренажёры появятся в следующих версиях платформы.
+            </p>
+          </header>
+          <div class="tests__grid animate-on-scroll">
+            <article class="tests__card">
+              <h3 class="tests__card-title">ОГЭ</h3>
+              <p class="tests__card-text">
+                Тренировочные задания по основным предметам для 9 класса.
+              </p>
+              <span class="tests__badge">Скоро</span>
+            </article>
+            <article class="tests__card">
+              <h3 class="tests__card-title">ЕГЭ</h3>
+              <p class="tests__card-text">
+                Пробные варианты и разбор типовых ошибок для 11 класса.
+              </p>
+              <span class="tests__badge">Скоро</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-school section section--accent" id="why-school" aria-labelledby="why-school-title">
+        <div class="container">
+          <header class="section__header animate-on-scroll">
+            <p class="section__label section__label--dark">Почему не Школа</p>
+            <h2 class="section__title section__title--dark" id="why-school-title">
+              Индивидуально — эффективнее
+            </h2>
+          </header>
+          <ul class="why-school__list animate-on-scroll">
+            <li class="why-school__item">
+              <h3 class="why-school__item-title">Личный темп</h3>
+              <p class="why-school__item-text">
+                Репетитор подстраивается под ученика, а не наоборот — без
+                отставания от класса и лишней скуки.
+              </p>
+            </li>
+            <li class="why-school__item">
+              <h3 class="why-school__item-title">Фокус на слабых местах</h3>
+              <p class="why-school__item-text">
+                Занятия строятся вокруг конкретных пробелов, а не общей программы
+                для тридцати человек.
+              </p>
+            </li>
+            <li class="why-school__item">
+              <h3 class="why-school__item-title">Современные педагоги</h3>
+              <p class="why-school__item-text">
+                Молодые преподаватели PedLab говорят с учениками на одном языке
+                и используют актуальные методики.
+              </p>
+            </li>
+            <li class="why-school__item">
+              <h3 class="why-school__item-title">Результат на экзамене</h3>
+              <p class="why-school__item-text">
+                Подготовка заточена под ОГЭ и ЕГЭ: тренировка форматов, сочинений
+                и типовых заданий.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="reviews section" id="reviews" aria-labelledby="reviews-title">
+        <div class="container">
+          <header class="section__header animate-on-scroll">
+            <p class="section__label">Отзывы</p>
+            <h2 class="section__title" id="reviews-title">Что говорят ученики</h2>
+          </header>
+
+          <div class="reviews-slider animate-on-scroll" data-reviews-slider>
+            <div class="reviews-slider__main">
+              <div class="reviews-slider__viewport">
+                <ul class="reviews-slider__track">
+                <li class="reviews-slider__slide">
+                  <article class="review-card">
+                    <div class="review-card__avatar" aria-hidden="true">А</div>
+                    <blockquote class="review-card__quote">
+                      <p class="review-card__text">
+                        Готовился с Анной Смирновой к ЕГЭ по русскому. Сдал на 96
+                        баллов! Очень понятно объясняет, занимались 2 раза в неделю.
+                        Рекомендую!
+                      </p>
+                      <footer class="review-card__footer">
+                        <cite class="review-card__author">Артём</cite>
+                        <span class="review-card__meta">11 класс</span>
+                      </footer>
+                    </blockquote>
+                  </article>
+                </li>
+                <li class="reviews-slider__slide">
+                  <article class="review-card">
+                    <div class="review-card__avatar" aria-hidden="true">Е</div>
+                    <blockquote class="review-card__quote">
+                      <p class="review-card__text">
+                        Дмитрий Ковалёв помог мне подтянуть физику с нуля за полгода.
+                        Поступил на бюджет в МГТУ. Спасибо большое!
+                      </p>
+                      <footer class="review-card__footer">
+                        <cite class="review-card__author">Екатерина</cite>
+                        <span class="review-card__meta">выпускница</span>
+                      </footer>
+                    </blockquote>
+                  </article>
+                </li>
+                <li class="reviews-slider__slide">
+                  <article class="review-card">
+                    <div class="review-card__avatar" aria-hidden="true">В</div>
+                    <blockquote class="review-card__quote">
+                      <p class="review-card__text">
+                        Елена Морозова — лучший репетитор по английскому! За 4 месяца
+                        подняла уровень с A2 до B2. Занятия проходили очень комфортно.
+                      </p>
+                      <footer class="review-card__footer">
+                        <cite class="review-card__author">Владислав</cite>
+                        <span class="review-card__meta">студент</span>
+                      </footer>
+                    </blockquote>
+                  </article>
+                </li>
+                <li class="reviews-slider__slide">
+                  <article class="review-card">
+                    <div class="review-card__avatar" aria-hidden="true">Д</div>
+                    <blockquote class="review-card__quote">
+                      <p class="review-card__text">
+                        Максим Алексашин — преподаватель с душой. История оживает на
+                        его уроках. Подготовил меня к ЕГЭ за 3 месяца, результат —
+                        90 баллов.
+                      </p>
+                      <footer class="review-card__footer">
+                        <cite class="review-card__author">Дарья</cite>
+                        <span class="review-card__meta">11 класс</span>
+                      </footer>
+                    </blockquote>
+                  </article>
+                </li>
+                <li class="reviews-slider__slide">
+                  <article class="review-card">
+                    <div class="review-card__avatar" aria-hidden="true">И</div>
+                    <blockquote class="review-card__quote">
+                      <p class="review-card__text">
+                        Педагог Ольга Павлова объясняет химию так, что становится
+                        понятно даже сложные темы. ОГЭ сдал на 5!
+                      </p>
+                      <footer class="review-card__footer">
+                        <cite class="review-card__author">Иван</cite>
+                        <span class="review-card__meta">9 класс</span>
+                      </footer>
+                    </blockquote>
+                  </article>
+                </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="reviews-slider__controls">
+              <button
+                class="reviews-slider__btn reviews-slider__btn--prev"
+                type="button"
+                aria-label="Предыдущий отзыв"
+              >
+                <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M12 4l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="reviews-slider__dots" role="tablist" aria-label="Выбор отзыва"></div>
+              <button
+                class="reviews-slider__btn reviews-slider__btn--next"
+                type="button"
+                aria-label="Следующий отзыв"
+              >
+                <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M8 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking section section--dark" id="booking" aria-labelledby="booking-title">
+        <div class="container">
+          <div class="booking__grid">
+            <header class="section__header animate-on-scroll">
+              <p class="section__label">Запись</p>
+              <h2 class="section__title" id="booking-title">Записаться на занятие</h2>
+              <p class="section__desc">
+                Выберите репетитора, дату и время. Форма пока работает как
+                заглушка — интеграция с расписанием появится позже.
+              </p>
+            </header>
+
+            <form class="booking__form animate-on-scroll" id="booking-form" novalidate>
+              <div class="booking__field">
+                <label class="booking__label" for="booking-tutor">Репетитор</label>
+                <select class="booking__input booking__select" id="booking-tutor" name="tutor" required>
+                  <option value="">Выберите репетитора</option>
+                  <option value="Максим Алексашин">Максим Алексашин — История</option>
+                  <option value="Андрей Ефремов">Андрей Ефремов — История / Обществознание</option>
+                  <option value="Василина Твеленева">Василина Твеленева — История / Обществознание</option>
+                  <option value="Анна Смирнова">Анна Смирнова — Русский язык</option>
+                  <option value="Дмитрий Ковалёв">Дмитрий Ковалёв — Физика</option>
+                  <option value="Елена Морозова">Елена Морозова — Английский</option>
+                  <option value="Ольга Павлова">Ольга Павлова — Химия</option>
+                </select>
+              </div>
+              <div class="booking__row">
+                <div class="booking__field">
+                  <label class="booking__label" for="booking-date">Дата</label>
+                  <input class="booking__input" type="date" id="booking-date" name="date" required />
+                </div>
+                <div class="booking__field">
+                  <label class="booking__label" for="booking-time">Время</label>
+                  <input class="booking__input" type="time" id="booking-time" name="time" required />
+                </div>
+              </div>
+              <div class="booking__field">
+                <label class="booking__label" for="booking-name">Ваше имя</label>
+                <input class="booking__input" type="text" id="booking-name" name="name" autocomplete="name" required placeholder="Как к вам обращаться" />
+              </div>
+              <div class="booking__field">
+                <label class="booking__label" for="booking-phone">Телефон</label>
+                <input class="booking__input" type="tel" id="booking-phone" name="phone" autocomplete="tel" required placeholder="+7 (___) ___-__-__" />
+              </div>
+              <button class="button button--primary button--full" type="submit">
+                Отправить заявку
+              </button>
+              <p class="booking__note" id="booking-message" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="cabinet section" id="cabinet" aria-labelledby="cabinet-title">
+        <div class="container">
+          <div class="cabinet__stub animate-on-scroll">
+            <div class="cabinet__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="16" r="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 42c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h2 class="cabinet__title" id="cabinet-title">Личный кабинет</h2>
+            <p class="cabinet__text">
+              Раздел в разработке. Здесь будут расписание занятий, материалы и
+              история подготовки.
+            </p>
+            <form class="cabinet__form" aria-label="Форма входа (заглушка)">
+              <div class="cabinet__field">
+                <label class="cabinet__label" for="cabinet-email">Email</label>
+                <input class="cabinet__input" type="email" id="cabinet-email" name="email" disabled placeholder="email@example.com" />
+              </div>
+              <div class="cabinet__field">
+                <label class="cabinet__label" for="cabinet-password">Пароль</label>
+                <input class="cabinet__input" type="password" id="cabinet-password" name="password" disabled placeholder="••••••••" />
+              </div>
+              <button class="button button--outline button--full" type="button" disabled>
+                Войти — скоро
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <div class="footer-logo">PedLab</div>
-            <div class="footer-links">
-                <a href="#" class="footer-link">О нас</a>
-                <a href="#" class="footer-link">Репетиторы</a>
-                <a href="#" class="footer-link">Методики</a>
-                <a href="#" class="footer-link">Отзывы</a>
-                <a href="#" class="footer-link">Контакты</a>
-            </div>
-            <p class="copyright">© 2023 PedLab. Все права защищены.</p>
+      <div class="footer__inner container">
+        <div class="footer__brand">
+          <a href="#main" class="footer__logo">Ped<span class="footer__logo-accent">Lab</span></a>
+          <p class="footer__tagline">Платформа подбора репетиторов</p>
         </div>
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+          <a class="footer__link" href="#about">О нас</a>
+          <a class="footer__link" href="#teachers">Репетиторы</a>
+          <a class="footer__link" href="#reviews">Отзывы</a>
+          <a class="footer__link" href="#booking">Запись</a>
+          <a
+            class="footer__link footer__link--external"
+            href="https://techbyteso.github.io/MaxTeachCard/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            MaxTeachCard
+          </a>
+        </nav>
+        <div class="footer__contacts">
+          <a class="footer__contact" href="mailto:info@pedlab.ru">info@pedlab.ru</a>
+          <a class="footer__contact" href="tel:+74951234567">+7 (495) 123-45-67</a>
+        </div>
+        <p class="footer__copy">&copy; 2026 PedLab. Все права защищены.</p>
+      </div>
     </footer>
-</body>
+
+    <script src="script.js" defer></script>
+  </body>
 </html>
